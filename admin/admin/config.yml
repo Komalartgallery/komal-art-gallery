@@ -2,21 +2,22 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: https://hilarious-valkyrie-164b90.netlify.app
+
 media_folder: "images"
 public_folder: "/images"
 
 collections:
-
   - name: "oil"
     label: "Oil Paintings"
     folder: "content/oil"
     create: true
     fields:
-      - { name: "image", widget: "image" }
+      - { name: "image", label: "Image", widget: "image" }
 
   - name: "portrait"
     label: "Portraits"
     folder: "content/portrait"
     create: true
     fields:
-      - { name: "image", widget: "image" }
+      - { name: "image", label: "Image", widget: "image" }
