@@ -1,238 +1,300 @@
-<header class="header">
-  <div class="logo">KOMAL ART GALLERY</div>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fafafa;
+color:#222;
+line-height:1.6;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#1F3C88;
+color:white;
+}
+
+.logo{
+font-weight:600;
+letter-spacing:2px;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+nav a:hover{
+color:#F2C94C;
+}
+
+.intro{
+text-align:center;
+padding:60px 10%;
+background:#F2F7FF;
+}
+
+.intro h1{
+font-size:36px;
+color:#1F3C88;
+}
+
+.gallery-section{
+padding:70px 10%;
+text-align:center;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.category{
+cursor:pointer;
+transition:.3s;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+border-radius:8px;
+overflow:hidden;
+background:white;
+}
+
+.category img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.category h3{
+padding:15px;
+}
+
+.category:hover{
+transform:scale(1.05);
+border:2px solid #F2C94C;
+}
+
+.video-section,
+.school,
+.contact,
+.register,
+.testimonials{
+padding:60px 10%;
+text-align:center;
+}
+
+.video-container{
+max-width:800px;
+margin:auto;
+position:relative;
+padding-bottom:56.25%;
+}
+
+.video-container iframe{
+position:absolute;
+width:100%;
+height:100%;
+left:0;
+top:0;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+border-left:4px solid #F2C94C;
+}
+
+.register form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,select,textarea{
+padding:12px;
+}
+
+button{
+background:#1F3C88;
+color:#F2C94C;
+padding:12px;
+border:none;
+cursor:pointer;
+}
+
+.album-popup,
+.enlarge-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.album-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+width:80%;
+}
+
+.album-grid img{
+width:100%;
+}
+
+.enlarge-popup img{
+max-width:90%;
+max-height:90%;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
 
-  <nav>
-    <a href="#gallery">Gallery</a>
-    <a href="#video">Video</a>
-    <a href="#school">Art School</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+}
 
+footer{
+background:#1F3C88;
+color:white;
+padding:20px;
+text-align:center;
+}
 
-<section class="intro">
-<h1>Komal Art Gallery, Regd.</h1>
+@media(max-width:768px){
 
-<p>
-Registered art gallery and art school in Moga, Punjab, led by 
-<strong>Gurpreet Singh Komal</strong>. 
-Specializing in oil paintings, pencil portraits, fabric painting,
-mosaic art and professional art classes.
-</p>
+.header{
+flex-direction:column;
+}
 
-</section>
+.testimonial-grid{
+grid-template-columns:1fr;
+}
 
+}
+</style>
+<script>
 
+const albums = {
 
-<section id="gallery" class="gallery-section">
+oil:[
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil1.jpg.JPG",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil2.jpg.JPG",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil3.jpg.JPG"
+],
 
-<h2>Artwork Categories</h2>
+pencil:[
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil1.jpg.JPG",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil2.jpg.JPG",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil3.jpg.JPG"
+],
 
-<div class="category-grid">
+fabric:[
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric1.jpg.jpg",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric2.jpg.JPG",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric3.jpg.jpg"
+],
 
+mosaic:[
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic1.jpg.jpg",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic2.jpg.jpg",
+"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic3.jpg.jpg"
+]
 
-<div class="category" onclick="openAlbum('oil')">
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil1.jpg.JPG">
-<h3>Oil Paintings</h3>
-</div>
+};
 
 
-<div class="category" onclick="openAlbum('pencil')">
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil1.jpg.JPG">
-<h3>Pencil Portraits</h3>
-</div>
 
+function openAlbum(category){
 
+let popup=document.getElementById("albumPopup");
+let grid=document.getElementById("albumGrid");
 
-<div class="category" onclick="openAlbum('fabric')">
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric1.jpg.jpg">
-<h3>Fabric Painting</h3>
-</div>
+grid.innerHTML="";
 
 
+albums[category].forEach(function(imageURL){
 
-<div class="category" onclick="openAlbum('mosaic')">
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic1.jpg.jpg">
-<h3>Mosaic Art</h3>
-</div>
+let img=document.createElement("img");
 
+img.src=imageURL;
 
-</div>
+img.onclick=function(){
 
-</section>
+openImage(imageURL);
 
+};
 
+grid.appendChild(img);
 
-<div id="albumPopup" class="album-popup">
+});
 
-<span class="close-btn" onclick="closeAlbum()">×</span>
 
-<div id="albumGrid" class="album-grid"></div>
+popup.style.display="flex";
 
-</div>
+}
 
 
 
-<div id="imagePopup" class="enlarge-popup">
+function closeAlbum(){
 
-<span class="close-btn" onclick="closeImage()">×</span>
+document.getElementById("albumPopup").style.display="none";
 
-<img id="bigImage">
+}
 
-</div>
 
 
+function openImage(imageURL){
 
+document.getElementById("bigImage").src=imageURL;
 
-<section id="video" class="video-section">
+document.getElementById("imagePopup").style.display="flex";
 
-<h2>Inside Komal Art Gallery</h2>
+}
 
-<div class="video-container">
 
-<iframe 
-src="https://www.youtube.com/embed/LMWj7SO328U?mute=1&loop=1&playlist=LMWj7SO328U"
-allowfullscreen>
-</iframe>
 
-</div>
+function closeImage(){
 
-</section>
+document.getElementById("imagePopup").style.display="none";
 
+}
 
 
-
-<section id="school" class="school">
-
-<h2>Komal Art School</h2>
-
-<p>
-Professional training in drawing, painting, fabric art and creative design.
-Students receive certificates after completion.
-</p>
-
-
-</section>
-
-
-
-
-<section class="testimonials">
-
-<h2>What Our Clients Say</h2>
-
-
-<div class="testimonial-grid">
-
-
-<div class="testimonial">
-<p>
-"Beautiful handmade paintings and amazing artwork."
-</p>
-<h4>Art Collector</h4>
-</div>
-
-
-<div class="testimonial">
-<p>
-"Excellent guidance and creative learning experience."
-</p>
-<h4>Art Student</h4>
-</div>
-
-
-
-<div class="testimonial">
-<p>
-"Portrait sketch quality was outstanding."
-</p>
-<h4>International Client</h4>
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-<section class="register">
-
-<h2>Join Komal Art School</h2>
-
-
-<form action="https://submit-form.com/KEhXAvbXn" method="POST">
-
-
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="email" name="email" placeholder="Email">
-
-<input type="tel" name="phone" placeholder="Phone Number">
-
-
-<select name="course">
-
-<option>Select Course</option>
-<option>Oil Painting</option>
-<option>Pencil Sketching</option>
-<option>Fabric Painting</option>
-<option>Mosaic Art</option>
-
-</select>
-
-
-<textarea placeholder="Message"></textarea>
-
-
-<button>
-Register
-</button>
-
-
-</form>
-
-</section>
-
-
-
-
-
-<section id="contact" class="contact">
-
-<h2>Contact</h2>
-
-<p>Komal Art Gallery</p>
-
-<p>Moga, Punjab, India</p>
-
-<p>WhatsApp: +91 9988387388</p>
-
-<p>Email: komalartgallery@gmail.com</p>
-
-
-</section>
-
-
-
-
-<a class="whatsapp"
-href="https://wa.me/919988387388"
-target="_blank">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-
-
-
-<footer>
-
-<p>
-© Komal Art Gallery, Regd.
-</p>
-
-</footer>
+</script>
