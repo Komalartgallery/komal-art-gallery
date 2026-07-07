@@ -10,12 +10,16 @@
 
 <meta name="description" content="Komal Art Gallery Moga Punjab. Oil paintings, pencil portraits, fabric painting, mosaic art and art classes.">
 
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
+
 <style>
+
 
 *{
 margin:0;
@@ -25,14 +29,20 @@ font-family:'Poppins',sans-serif;
 }
 
 
+
 body{
+
 background:#fafafa;
 color:#333;
 line-height:1.6;
+
 }
 
 
+
+
 /* HEADER */
+
 
 .header{
 
@@ -47,6 +57,7 @@ flex-wrap:wrap;
 }
 
 
+
 .logo{
 
 font-size:22px;
@@ -54,6 +65,7 @@ font-weight:600;
 letter-spacing:2px;
 
 }
+
 
 
 nav a{
@@ -66,6 +78,7 @@ font-size:14px;
 }
 
 
+
 nav a:hover{
 
 color:#F2C94C;
@@ -74,7 +87,10 @@ color:#F2C94C;
 
 
 
+
+
 /* INTRO */
+
 
 .intro{
 
@@ -83,6 +99,7 @@ padding:60px 10%;
 background:#F2F7FF;
 
 }
+
 
 
 .intro h1{
@@ -94,6 +111,7 @@ margin-bottom:15px;
 }
 
 
+
 .intro p{
 
 max-width:900px;
@@ -103,7 +121,10 @@ margin:auto;
 
 
 
-/* ALL SECTIONS */
+
+
+/* SECTION COMMON */
+
 
 .gallery-section,
 .video-section,
@@ -113,12 +134,14 @@ margin:auto;
 .reviews,
 .register,
 .contact,
-.location{
+.location,
+.social-section{
 
 padding:70px 10%;
 text-align:center;
 
 }
+
 
 
 
@@ -131,7 +154,12 @@ margin-bottom:25px;
 
 
 
-/* GRID */
+
+
+
+
+/* GALLERY GRID */
+
 
 .category-grid{
 
@@ -140,6 +168,8 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 
 }
+
+
 
 
 
@@ -155,12 +185,16 @@ transition:.3s;
 }
 
 
+
+
 .category:hover{
 
 transform:scale(1.05);
 border:2px solid #F2C94C;
 
 }
+
+
 
 
 
@@ -174,6 +208,7 @@ object-fit:cover;
 
 
 
+
 .category h3{
 
 padding:15px;
@@ -183,13 +218,21 @@ color:#1F3C88;
 
 
 
+
+
+
+
+
 /* VIDEO */
+
 
 .video-section{
 
 background:#f7f7f7;
 
 }
+
+
 
 
 .video-container{
@@ -201,6 +244,8 @@ padding-bottom:56.25%;
 height:0;
 
 }
+
+
 
 
 .video-container iframe{
@@ -215,7 +260,12 @@ left:0;
 
 
 
+
+
+
+
 /* TESTIMONIAL */
+
 
 .testimonial-grid{
 
@@ -224,6 +274,7 @@ grid-template-columns:repeat(3,1fr);
 gap:25px;
 
 }
+
 
 
 .testimonial{
@@ -237,7 +288,10 @@ border-left:4px solid #F2C94C;
 
 
 
+
+
 /* STUDENT BACKGROUND */
+
 
 .student-work{
 
@@ -247,7 +301,10 @@ background:#F2F7FF;
 
 
 
+
+
 /* FORM */
+
 
 .register form{
 
@@ -258,6 +315,8 @@ flex-direction:column;
 gap:12px;
 
 }
+
+
 
 
 .register input,
@@ -271,11 +330,15 @@ border-radius:5px;
 }
 
 
+
+
 .register textarea{
 
 height:100px;
 
 }
+
+
 
 
 .register button{
@@ -290,6 +353,8 @@ font-size:16px;
 }
 
 
+
+
 .register button:hover{
 
 background:#F2C94C;
@@ -299,7 +364,47 @@ color:#1F3C88;
 
 
 
+
+
+
+/* SOCIAL ICONS */
+
+
+.social-icons{
+
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:20px;
+
+}
+
+
+
+.social-icons a{
+
+font-size:35px;
+color:#1F3C88;
+transition:.3s;
+
+}
+
+
+
+.social-icons a:hover{
+
+color:#F2C94C;
+transform:scale(1.2);
+
+}
+
+
+
+
+
+
 /* MOBILE */
+
 
 @media(max-width:768px){
 
@@ -312,6 +417,7 @@ gap:15px;
 }
 
 
+
 nav a{
 
 margin:8px;
@@ -319,11 +425,13 @@ margin:8px;
 }
 
 
+
 .testimonial-grid{
 
 grid-template-columns:1fr;
 
 }
+
 
 
 .category img{
@@ -335,22 +443,28 @@ height:250px;
 
 }
 
+
+
 </style>
 
 
 </head>
 
 
+
 <body>
 
 
 
-<header class="header">
+<header class="header" id="home">
 
 
 <div class="logo">
+
 KOMAL ART GALLERY
+
 </div>
+
 
 
 <nav>
@@ -365,7 +479,10 @@ KOMAL ART GALLERY
 
 <a href="#reviews">Reviews</a>
 
+<a href="#social">Social</a>
+
 <a href="#contact">Contact</a>
+
 
 </nav>
 
@@ -379,15 +496,23 @@ KOMAL ART GALLERY
 
 
 <h1>
+
 Komal Art Gallery, Regd.
+
 </h1>
 
 
+
 <p>
+
 Registered art gallery and art school in Moga, Punjab, led by
+
 <strong>Gurpreet Singh Komal</strong>.
+
 Specializing in oil paintings, pencil portraits,
+
 fabric painting, mosaic art and creative art classes.
+
 </p>
 
 
@@ -396,16 +521,22 @@ fabric painting, mosaic art and creative art classes.
 
 
 
+
+
+
 <section id="gallery" class="gallery-section">
 
 
 <h2>
+
 Artwork Categories
+
 </h2>
 
 
 
 <div class="category-grid">
+
 
 
 <div class="category" onclick="openAlbum('oil')">
@@ -415,11 +546,15 @@ Artwork Categories
 
 
 <h3>
+
 Oil Paintings
+
 </h3>
 
 
 </div>
+
+
 
 
 
@@ -430,11 +565,15 @@ Oil Paintings
 
 
 <h3>
+
 Pencil Portraits
+
 </h3>
 
 
 </div>
+
+
 
 
 
@@ -445,11 +584,15 @@ Pencil Portraits
 
 
 <h3>
+
 Fabric Painting
+
 </h3>
 
 
 </div>
+
+
 
 
 
@@ -460,7 +603,9 @@ Fabric Painting
 
 
 <h3>
+
 Mosaic Art
+
 </h3>
 
 
@@ -477,6 +622,7 @@ Mosaic Art
 <h2>
 Inside Komal Art Gallery
 </h2>
+
 
 
 <div class="video-container">
@@ -497,12 +643,16 @@ allowfullscreen>
 
 
 
+
+
+
 <section id="reviews" class="reviews">
 
 
 <h2>
 Google Reviews
 </h2>
+
 
 
 <div class="testimonial">
@@ -513,14 +663,17 @@ Google Reviews
 </p>
 
 
+
 <p>
 "Beautiful artwork, excellent painting quality and creative teaching experience."
 </p>
 
 
+
 <p>
 You can view more customer reviews on our Google Business Profile.
 </p>
+
 
 
 <a href="https://www.google.com/search?q=Komal+Art+Gallery+Moga" target="_blank">
@@ -534,6 +687,9 @@ View Google Reviews
 
 
 </section>
+
+
+
 
 
 
@@ -555,13 +711,18 @@ What Our Clients Say
 
 <div class="testimonial">
 
+
 <p>
+
 "Beautiful handmade paintings and amazing artwork."
+
 </p>
 
 
 <h4>
+
 Art Collector
+
 </h4>
 
 
@@ -571,15 +732,21 @@ Art Collector
 
 
 
+
 <div class="testimonial">
 
+
 <p>
+
 "Excellent guidance and creative learning experience."
+
 </p>
 
 
 <h4>
+
 Art Student
+
 </h4>
 
 
@@ -589,15 +756,22 @@ Art Student
 
 
 
+
+
 <div class="testimonial">
 
+
 <p>
+
 "Portrait sketch quality was outstanding."
+
 </p>
 
 
 <h4>
+
 International Client
+
 </h4>
 
 
@@ -609,6 +783,9 @@ International Client
 
 
 </section>
+
+
+
 
 
 
@@ -619,17 +796,24 @@ International Client
 
 
 <h2>
+
 Komal Art School
+
 </h2>
 
 
+
 <p>
+
 Professional training in drawing, painting, fabric art and creative design.
 Students receive certificates after completion.
+
 </p>
 
 
 </section>
+
+
 
 
 
@@ -641,18 +825,25 @@ Students receive certificates after completion.
 
 
 <h2>
+
 Student Work Gallery
+
 </h2>
 
 
+
 <p>
+
 Explore artwork created by students of Komal Art School during their learning journey.
+
 </p>
 
 
 
 
+
 <div class="category-grid">
+
 
 
 
@@ -665,11 +856,14 @@ Explore artwork created by students of Komal Art School during their learning jo
 
 
 <h3>
+
 Student Painting 1
+
 </h3>
 
 
 </div>
+
 
 
 
@@ -682,11 +876,15 @@ Student Painting 1
 
 
 <h3>
+
 Student Painting 2
+
 </h3>
 
 
 </div>
+
+
 
 
 
@@ -699,11 +897,15 @@ Student Painting 2
 
 
 <h3>
+
 Student Painting 3
+
 </h3>
 
 
 </div>
+
+
 
 
 
@@ -716,11 +918,14 @@ Student Painting 3
 
 
 <h3>
+
 Student Painting 4
+
 </h3>
 
 
 </div>
+
 
 
 
@@ -832,6 +1037,8 @@ Register
 
 
 
+
+
 <section id="contact" class="contact">
 
 
@@ -862,6 +1069,7 @@ Email: komalartgallery@gmail.com
 
 
 </section>
+
 
 
 
@@ -916,6 +1124,72 @@ loading="lazy">
 
 
 
+
+<section id="social" class="social-section">
+
+
+<h2>
+Follow Komal Art Gallery
+</h2>
+
+
+
+<p>
+See latest artwork, student projects and gallery updates on social media.
+</p>
+
+
+
+
+<div class="social-icons">
+
+
+
+<a href="https://www.instagram.com/gurpreetsinghkomal/" 
+target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+
+
+<a href="https://www.facebook.com/gurpreet.komal" 
+target="_blank">
+
+<i class="fa-brands fa-facebook"></i>
+
+</a>
+
+
+
+
+
+
+<a href="https://www.tiktok.com/@gurpreetkomal?_r=1&_t=ZS-97qWlhYhn8u" 
+target="_blank">
+
+<i class="fa-brands fa-tiktok"></i>
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
 <a class="whatsapp" 
 href="https://wa.me/919988387388"
 target="_blank">
@@ -932,6 +1206,7 @@ target="_blank">
 
 
 
+
 <footer>
 
 
@@ -940,18 +1215,7 @@ target="_blank">
 </p>
 
 
-</footer>
-
-
-
-
-
-
-
-
-
-<!-- ALBUM POPUP -->
-
+</footer><!-- ALBUM POPUP -->
 
 <div id="albumPopup" class="album-popup">
 
@@ -963,8 +1227,6 @@ target="_blank">
 
 
 </div>
-
-
 
 
 
@@ -982,114 +1244,185 @@ target="_blank">
 <img id="bigImage">
 
 
-</div><style>
+</div>
 
 
-/* POPUP STYLE */
+
+
+
+<style>
+
+
+/* POPUP */
 
 
 .album-popup,
 .enlarge-popup{
 
+
 position:fixed;
+
 top:0;
+
 left:0;
+
 width:100%;
+
 height:100%;
+
 background:rgba(0,0,0,.92);
+
 display:none;
+
 justify-content:center;
+
 align-items:center;
+
 z-index:999;
+
 padding:30px;
 
+
 }
+
 
 
 
 .album-grid{
 
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:20px;
+
 width:90%;
+
 max-width:1000px;
 
+
 }
+
 
 
 
 .album-grid img{
 
+
 width:100%;
+
 border-radius:8px;
+
 cursor:pointer;
 
+
 }
+
 
 
 
 .enlarge-popup img{
 
+
 max-width:90%;
+
 max-height:85%;
+
 border-radius:10px;
 
+
 }
+
 
 
 
 .close-btn{
 
+
 position:absolute;
+
 top:20px;
+
 right:35px;
+
 font-size:45px;
+
 color:white;
+
 cursor:pointer;
 
+
 }
+
 
 
 
 .whatsapp{
 
+
 position:fixed;
+
 bottom:20px;
+
 right:20px;
+
 background:#25D366;
+
 color:white;
+
 width:55px;
+
 height:55px;
+
 border-radius:50%;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 font-size:28px;
+
 text-decoration:none;
+
 z-index:1000;
 
-}
-
-
-
-footer{
-
-background:#1F3C88;
-color:white;
-text-align:center;
-padding:20px;
 
 }
+
 
 
 
 .map-container{
 
+
 max-width:900px;
+
 margin:auto;
+
 border-radius:10px;
+
 overflow:hidden;
+
+
+}
+
+
+
+
+footer{
+
+
+background:#1F3C88;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
 
 }
 
@@ -1098,16 +1431,22 @@ overflow:hidden;
 
 @media(max-width:768px){
 
+
 .album-grid{
+
 
 grid-template-columns:1fr;
 
-}
 
 }
+
+
+}
+
 
 
 </style>
+
 
 
 
@@ -1125,9 +1464,7 @@ oil:[
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil1.jpg.JPG",
 
-
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil2.jpg.JPG",
-
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil3.jpg.JPG"
 
@@ -1137,15 +1474,12 @@ oil:[
 
 
 
-
 pencil:[
 
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil1.jpg.JPG",
 
-
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil2.jpg.JPG",
-
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil3.jpg.JPG"
 
@@ -1155,16 +1489,12 @@ pencil:[
 
 
 
-
-
 fabric:[
 
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric1.jpg.jpg",
 
-
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric2.jpg.JPG",
-
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric3.jpg.jpg"
 
@@ -1174,16 +1504,12 @@ fabric:[
 
 
 
-
-
 mosaic:[
 
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic1.jpg.jpg",
 
-
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic2.jpg.jpg",
-
 
 "https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic3.jpg.jpg"
 
@@ -1204,7 +1530,6 @@ function openAlbum(category){
 
 
 let popup=document.getElementById("albumPopup");
-
 
 let grid=document.getElementById("albumGrid");
 
@@ -1228,7 +1553,9 @@ img.src=imgURL;
 
 img.onclick=function(){
 
+
 openImage(imgURL);
+
 
 };
 
@@ -1245,8 +1572,8 @@ grid.appendChild(img);
 popup.style.display="flex";
 
 
-
 }
+
 
 
 
@@ -1261,6 +1588,7 @@ document.getElementById("albumPopup").style.display="none";
 
 
 }
+
 
 
 
@@ -1285,6 +1613,7 @@ document.getElementById("imagePopup").style.display="flex";
 
 
 
+
 function closeImage(){
 
 
@@ -1296,6 +1625,8 @@ document.getElementById("imagePopup").style.display="none";
 
 
 </script>
+
+
 
 
 </body>
