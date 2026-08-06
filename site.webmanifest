@@ -1,0 +1,12 @@
+{
+  "name": "Komal Art Gallery",
+  "short_name": "Komal Art",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f2e9",
+  "theme_color": "#5f1725",
+  "icons": [
+    {"src": "images/branding/favicon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "images/branding/favicon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
