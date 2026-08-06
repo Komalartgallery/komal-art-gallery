@@ -354,43 +354,18 @@ h3 {
   flex-shrink: 0;
 }
 
-.brand-logo-wrap {
-  width: 58px;
-  height: 58px;
-  display: inline-grid;
-  flex: 0 0 58px;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid rgba(222, 193, 138, 0.92);
-  border-radius: 50%;
-  background: rgba(255, 253, 249, 0.96);
-  box-shadow: 0 7px 22px rgba(20, 10, 8, 0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.brand:hover .brand-logo-wrap {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(20, 10, 8, 0.24);
-}
-
-.brand-logo {
-  width: 100%;
-  height: 100%;
-  padding: 3px;
-  object-fit: contain;
-}
-
-.site-header.is-sticky .brand-logo-wrap {
-  border-color: rgba(95, 23, 37, 0.28);
-  box-shadow: 0 5px 16px rgba(36, 28, 26, 0.12);
-}
-
-.site-footer .brand-logo-wrap {
-  width: 72px;
-  height: 72px;
-  flex-basis: 72px;
-  border-color: rgba(222, 193, 138, 0.7);
-  background: var(--ivory);
+.brand-mark {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .brand-copy {
@@ -2217,16 +2192,9 @@ h3 {
     font-size: 0.49rem;
   }
 
-  .brand-logo-wrap {
-    width: 48px;
-    height: 48px;
-    flex-basis: 48px;
-  }
-
-  .site-footer .brand-logo-wrap {
-    width: 64px;
-    height: 64px;
-    flex-basis: 64px;
+  .brand-mark {
+    width: 40px;
+    height: 40px;
   }
 
   .header-inner {
