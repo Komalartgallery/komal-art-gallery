@@ -629,6 +629,44 @@
     <div class="container footer-bottom"><p>© <span data-year></span> Komal Art Gallery, Regd. All rights reserved.</p><div><a href="#faq">FAQ</a><a href="sitemap.xml">Sitemap</a><a href="#home">Back to top ↑</a></div></div>
   </footer>
 
+
+  <section class="gallery-chatbot" data-chatbot aria-label="Komal Art Gallery virtual assistant">
+    <button class="chatbot-launcher" type="button" aria-expanded="false" aria-controls="gallery-chatbot-panel" data-chatbot-toggle>
+      <span class="chatbot-launcher-icon" aria-hidden="true">✦</span>
+      <span class="chatbot-launcher-label">Ask Komal Assistant</span>
+    </button>
+
+    <div id="gallery-chatbot-panel" class="chatbot-panel" data-chatbot-panel hidden>
+      <header class="chatbot-header">
+        <div class="chatbot-identity">
+          <span class="chatbot-avatar" aria-hidden="true">K</span>
+          <div><strong>Komal Assistant</strong><small><span aria-hidden="true">●</span> Instant answers</small></div>
+        </div>
+        <button class="chatbot-close" type="button" aria-label="Close chat" data-chatbot-close>×</button>
+      </header>
+
+      <div class="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions" data-chatbot-messages>
+        <div class="chat-message assistant-message">
+          <p>Hello! I can help with paintings, custom portraits, art classes, antiques, worldwide shipping and contact details.</p>
+        </div>
+      </div>
+
+      <div class="chatbot-suggestions" aria-label="Suggested questions">
+        <button type="button" data-chat-question="Do you ship worldwide?">Worldwide shipping</button>
+        <button type="button" data-chat-question="Can I order a custom portrait?">Custom portrait</button>
+        <button type="button" data-chat-question="Tell me about art classes">Art classes</button>
+        <button type="button" data-chat-question="How can I contact you?">Contact details</button>
+      </div>
+
+      <form class="chatbot-form" data-chatbot-form>
+        <label class="sr-only" for="chatbot-question">Ask a question</label>
+        <input id="chatbot-question" name="question" type="text" autocomplete="off" maxlength="240" placeholder="Type your question…" data-chatbot-input required>
+        <button type="submit" aria-label="Send question">➜</button>
+      </form>
+      <p class="chatbot-note">Automatic FAQ assistant. For prices and confirmed availability, contact the gallery directly.</p>
+    </div>
+  </section>
+
   <a class="whatsapp-button" href="https://wa.me/919988387388?text=Hello%20Komal%20Art%20Gallery%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer" aria-label="Contact Komal Art Gallery on WhatsApp">
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3A12.8 12.8 0 0 0 5.03 22.3L3.3 28.63l6.48-1.7A12.8 12.8 0 1 0 16.04 3Zm0 23.42a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.84 1 1.03-3.74-.25-.39a10.61 10.61 0 1 1 8.85 4.84Zm5.82-7.95c-.32-.16-1.89-.93-2.18-1.04-.29-.1-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.58a9.56 9.56 0 0 1-1.77-2.2c-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.66 0 1.57 1.14 3.08 1.3 3.29.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.15-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37Z"/></svg>
   </a>
