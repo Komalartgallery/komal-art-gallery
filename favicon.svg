@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Komal Art Gallery K logo">
+  <rect width="64" height="64" rx="4" fill="#241c1a"/>
+  <rect x="8" y="8" width="48" height="48" fill="none" stroke="#bd9250" stroke-width="2"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Georgia,serif" font-size="40" fill="#dec18a">K</text>
+</svg>

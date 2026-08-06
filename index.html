@@ -1,1634 +1,555 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Komal Art Gallery Moga Punjab | Paintings & Art School</title>
-
-<meta name="description" content="Komal Art Gallery Moga Punjab. Oil paintings, pencil portraits, fabric painting, mosaic art and art classes.">
-
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
-<style>
-
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-
-
-body{
-
-background:#fafafa;
-color:#333;
-line-height:1.6;
-
-}
-
-
-
-
-/* HEADER */
-
-
-.header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#1F3C88;
-color:white;
-flex-wrap:wrap;
-
-}
-
-
-
-.logo{
-
-font-size:22px;
-font-weight:600;
-letter-spacing:2px;
-
-}
-
-
-
-nav a{
-
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-size:14px;
-
-}
-
-
-
-nav a:hover{
-
-color:#F2C94C;
-
-}
-
-
-
-
-
-/* INTRO */
-
-
-.intro{
-
-text-align:center;
-padding:60px 10%;
-background:#F2F7FF;
-
-}
-
-
-
-.intro h1{
-
-font-size:38px;
-color:#1F3C88;
-margin-bottom:15px;
-
-}
-
-
-
-.intro p{
-
-max-width:900px;
-margin:auto;
-
-}
-
-
-
-
-
-/* SECTION COMMON */
-
-
-.gallery-section,
-.video-section,
-.school,
-.student-work,
-.testimonials,
-.reviews,
-.register,
-.contact,
-.location,
-.social-section{
-
-padding:70px 10%;
-text-align:center;
-
-}
-
-
-
-
-h2{
-
-color:#1F3C88;
-margin-bottom:25px;
-
-}
-
-
-
-
-
-
-
-/* GALLERY GRID */
-
-
-.category-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-
-}
-
-
-
-
-
-.category{
-
-background:white;
-border-radius:10px;
-overflow:hidden;
-cursor:pointer;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
-transition:.3s;
-
-}
-
-
-
-
-.category:hover{
-
-transform:scale(1.05);
-border:2px solid #F2C94C;
-
-}
-
-
-
-
-
-.category img{
-
-width:100%;
-height:300px;
-object-fit:cover;
-
-}
-
-
-
-
-.category h3{
-
-padding:15px;
-color:#1F3C88;
-
-}
-
-
-
-
-
-
-
-
-/* VIDEO */
-
-
-.video-section{
-
-background:#f7f7f7;
-
-}
-
-
-
-
-.video-container{
-
-max-width:850px;
-margin:auto;
-position:relative;
-padding-bottom:56.25%;
-height:0;
-
-}
-
-
-
-
-.video-container iframe{
-
-position:absolute;
-width:100%;
-height:100%;
-top:0;
-left:0;
-
-}
-
-
-
-
-
-
-
-/* TESTIMONIAL */
-
-
-.testimonial-grid{
-
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-
-}
-
-
-
-.testimonial{
-
-background:white;
-padding:25px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
-border-left:4px solid #F2C94C;
-
-}
-
-
-
-
-
-/* STUDENT BACKGROUND */
-
-
-.student-work{
-
-background:#F2F7FF;
-
-}
-
-
-
-
-
-/* FORM */
-
-
-.register form{
-
-max-width:450px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:12px;
-
-}
-
-
-
-
-.register input,
-.register select,
-.register textarea{
-
-padding:12px;
-border:1px solid #ccc;
-border-radius:5px;
-
-}
-
-
-
-
-.register textarea{
-
-height:100px;
-
-}
-
-
-
-
-.register button{
-
-background:#1F3C88;
-color:#F2C94C;
-border:none;
-padding:12px;
-cursor:pointer;
-font-size:16px;
-
-}
-
-
-
-
-.register button:hover{
-
-background:#F2C94C;
-color:#1F3C88;
-
-}
-
-
-
-
-
-
-/* SOCIAL ICONS */
-
-
-.social-icons{
-
-display:flex;
-justify-content:center;
-gap:25px;
-margin-top:20px;
-
-}
-
-
-
-.social-icons a{
-
-font-size:35px;
-color:#1F3C88;
-transition:.3s;
-
-}
-
-
-
-.social-icons a:hover{
-
-color:#F2C94C;
-transform:scale(1.2);
-
-}
-
-
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:768px){
-
-
-.header{
-
-flex-direction:column;
-gap:15px;
-
-}
-
-
-
-nav a{
-
-margin:8px;
-
-}
-
-
-
-.testimonial-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.category img{
-
-height:250px;
-
-}
-
-
-}
-
-
-
-</style>
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241c1a">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="color-scheme" content="light">
+
+  <title>Komal Art Gallery Moga | Original Paintings, Art Classes & Antiques</title>
+  <meta name="description" content="Explore original paintings, commissioned portraits, online and offline art classes, student work and antique collections at Komal Art Gallery in Moga, Punjab. Worldwide shipping available.">
+  <meta name="keywords" content="Komal Art Gallery, art gallery Moga, paintings Punjab, commissioned portraits India, oil paintings, pencil portraits, fabric painting, mosaic art, art classes Moga, online art classes, antiques Moga, worldwide art shipping">
+  <meta name="author" content="Komal Art Gallery">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://komalartgallery.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Komal Art Gallery">
+  <meta property="og:title" content="Komal Art Gallery | Original Art, Commissions & Antiques">
+  <meta property="og:description" content="A premium art gallery and art school in Moga, Punjab, offering handmade artwork, custom commissions, antique collections and worldwide shipping.">
+  <meta property="og:url" content="https://komalartgallery.com/">
+  <meta property="og:image" content="https://komalartgallery.com/images/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Komal Art Gallery original painting and worldwide art services">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Komal Art Gallery | Original Art, Commissions & Antiques">
+  <meta name="twitter:description" content="Original handmade artwork, custom commissions, art classes, antique collections and worldwide shipping from Moga, Punjab.">
+  <meta name="twitter:image" content="https://komalartgallery.com/images/social-preview.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/optimized/oil2.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "ArtGallery", "LocalBusiness"],
+        "@id": "https://komalartgallery.com/#gallery",
+        "name": "Komal Art Gallery",
+        "url": "https://komalartgallery.com/",
+        "image": "https://komalartgallery.com/images/social-preview.jpg",
+        "description": "Registered art gallery and art school in Moga, Punjab, offering original paintings, commissioned artwork, art classes and antique collections.",
+        "email": "komalartgallery@gmail.com",
+        "telephone": "+91-99883-87388",
+        "founder": {"@type": "Person", "name": "Gurpreet Singh Komal"},
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Moga",
+          "addressRegion": "Punjab",
+          "addressCountry": "IN"
+        },
+        "areaServed": "Worldwide",
+        "sameAs": [
+          "https://www.instagram.com/gurpreetsinghkomal/",
+          "https://www.facebook.com/gurpreet.komal",
+          "https://www.tiktok.com/@gurpreetkomal"
+        ],
+        "hasMap": "https://www.google.com/maps?q=Komal%20Art%20Gallery%20Moga%20Punjab"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://komalartgallery.com/#website",
+        "url": "https://komalartgallery.com/",
+        "name": "Komal Art Gallery",
+        "publisher": {"@id": "https://komalartgallery.com/#gallery"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://komalartgallery.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Komal Art Gallery ship paintings internationally?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Worldwide shipping is available. Packaging, delivery arrangements and payment details are confirmed directly for each artwork and destination."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can I order a custom portrait or painting?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can send a custom artwork inquiry for portraits, oil paintings, family artwork, religious art, gifts and other commissioned pieces."}
+          },
+          {
+            "@type": "Question",
+            "name": "Are art classes available online?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Komal Art School offers both offline and online learning enquiries for drawing, painting, fabric art and creative design."}
+          },
+          {
+            "@type": "Question",
+            "name": "How can I ask about an antique item?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Choose Antiques Inquiry in the contact form and describe the collection or item you are interested in. Availability and details are shared directly."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-
-
-
 <body>
-
-
-
-<header class="header" id="home">
-
-
-<div class="logo">
-
-KOMAL ART GALLERY
-
-</div>
-
-
-
-<nav>
-
-<a href="#gallery">Gallery</a>
-
-<a href="#video">Video</a>
-
-<a href="#school">Art School</a>
-
-<a href="#student">Students</a>
-
-<a href="#reviews">Reviews</a>
-
-<a href="#social">Social</a>
-
-<a href="#contact">Contact</a>
-
-
-</nav>
-
-
-</header>
-
-
-
-
-<section class="intro">
-
-
-<h1>
-
-Komal Art Gallery, Regd.
-
-</h1>
-
-
-
-<p>
-
-Registered art gallery and art school in Moga, Punjab, led by
-
-<strong>Gurpreet Singh Komal</strong>.
-
-Specializing in oil paintings, pencil portraits,
-
-fabric painting, mosaic art and creative art classes.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<section id="gallery" class="gallery-section">
-
-
-<h2>
-
-Artwork Categories
-
-</h2>
-
-
-
-<div class="category-grid">
-
-
-
-<div class="category" onclick="openAlbum('oil')">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil1.jpg.JPG">
-
-
-<h3>
-
-Oil Paintings
-
-</h3>
-
-
-</div>
-
-
-
-
-
-<div class="category" onclick="openAlbum('pencil')">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil1.jpg.JPG">
-
-
-<h3>
-
-Pencil Portraits
-
-</h3>
-
-
-</div>
-
-
-
-
-
-<div class="category" onclick="openAlbum('fabric')">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric1.jpg.jpg">
-
-
-<h3>
-
-Fabric Painting
-
-</h3>
-
-
-</div>
-
-
-
-
-
-<div class="category" onclick="openAlbum('mosaic')">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic1.jpg.jpg">
-
-
-<h3>
-
-Mosaic Art
-
-</h3>
-
-
-</div>
-
-
-
-</div>
-
-
-</section><section id="video" class="video-section">
-
-
-<h2>
-Inside Komal Art Gallery
-</h2>
-
-
-
-<div class="video-container">
-
-
-<iframe 
-src="https://www.youtube.com/embed/LMWj7SO328U?mute=1&loop=1&playlist=LMWj7SO328U"
-allowfullscreen>
-</iframe>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section id="reviews" class="reviews">
-
-
-<h2>
-Google Reviews
-</h2>
-
-
-
-<div class="testimonial">
-
-
-<p>
-⭐ ⭐ ⭐ ⭐ ⭐
-</p>
-
-
-
-<p>
-"Beautiful artwork, excellent painting quality and creative teaching experience."
-</p>
-
-
-
-<p>
-You can view more customer reviews on our Google Business Profile.
-</p>
-
-
-
-<a href="https://www.google.com/search?q=Komal+Art+Gallery+Moga" target="_blank">
-
-View Google Reviews
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="testimonials">
-
-
-<h2>
-What Our Clients Say
-</h2>
-
-
-
-<div class="testimonial-grid">
-
-
-
-<div class="testimonial">
-
-
-<p>
-
-"Beautiful handmade paintings and amazing artwork."
-
-</p>
-
-
-<h4>
-
-Art Collector
-
-</h4>
-
-
-</div>
-
-
-
-
-
-
-<div class="testimonial">
-
-
-<p>
-
-"Excellent guidance and creative learning experience."
-
-</p>
-
-
-<h4>
-
-Art Student
-
-</h4>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="testimonial">
-
-
-<p>
-
-"Portrait sketch quality was outstanding."
-
-</p>
-
-
-<h4>
-
-International Client
-
-</h4>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="school" class="school">
-
-
-<h2>
-
-Komal Art School
-
-</h2>
-
-
-
-<p>
-
-Professional training in drawing, painting, fabric art and creative design.
-Students receive certificates after completion.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="student" class="student-work">
-
-
-<h2>
-
-Student Work Gallery
-
-</h2>
-
-
-
-<p>
-
-Explore artwork created by students of Komal Art School during their learning journey.
-
-</p>
-
-
-
-
-
-<div class="category-grid">
-
-
-
-
-
-
-<div class="category">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/student1.jpg.jpg">
-
-
-<h3>
-
-Student Painting 1
-
-</h3>
-
-
-</div>
-
-
-
-
-
-
-<div class="category">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/student2.jpg.jpg">
-
-
-<h3>
-
-Student Painting 2
-
-</h3>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="category">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/student3.jpg.jpg">
-
-
-<h3>
-
-Student Painting 3
-
-</h3>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="category">
-
-
-<img src="https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/student4.jpg.jpg">
-
-
-<h3>
-
-Student Painting 4
-
-</h3>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</section><section class="register">
-
-
-<h2>
-Join Komal Art School
-</h2>
-
-
-
-
-<form action="https://submit-form.com/KEhXAvbXn" method="POST">
-
-
-
-<input 
-type="text" 
-name="name" 
-placeholder="Full Name"
-required>
-
-
-
-
-<input 
-type="email" 
-name="email" 
-placeholder="Email Address">
-
-
-
-
-
-<input 
-type="tel" 
-name="phone" 
-placeholder="Phone Number">
-
-
-
-
-
-<select name="course">
-
-
-<option>
-Select Course
-</option>
-
-
-<option>
-Oil Painting
-</option>
-
-
-<option>
-Pencil Sketching
-</option>
-
-
-<option>
-Fabric Painting
-</option>
-
-
-<option>
-Mosaic Art
-</option>
-
-
-</select>
-
-
-
-
-
-<textarea 
-name="message"
-placeholder="Your Message">
-</textarea>
-
-
-
-
-
-<button type="submit">
-
-Register
-
-</button>
-
-
-
-
-</form>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="contact" class="contact">
-
-
-<h2>
-Contact
-</h2>
-
-
-
-<p>
-Komal Art Gallery
-</p>
-
-
-<p>
-Moga, Punjab, India
-</p>
-
-
-<p>
-WhatsApp: +91 9988387388
-</p>
-
-
-<p>
-Email: komalartgallery@gmail.com
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="location">
-
-
-<h2>
-Our Location
-</h2>
-
-
-
-
-<div class="map-container">
-
-
-
-<iframe 
-
-src="https://www.google.com/maps?q=Komal%20Art%20Gallery%20Moga%20Punjab&output=embed"
-
-width="100%"
-
-height="400"
-
-style="border:0;"
-
-allowfullscreen=""
-
-loading="lazy">
-
-</iframe>
-
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="social" class="social-section">
-
-
-<h2>
-Follow Komal Art Gallery
-</h2>
-
-
-
-<p>
-See latest artwork, student projects and gallery updates on social media.
-</p>
-
-
-
-
-<div class="social-icons">
-
-
-
-<a href="https://www.instagram.com/gurpreetsinghkomal/" 
-target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-
-
-
-<a href="https://www.facebook.com/gurpreet.komal" 
-target="_blank">
-
-<i class="fa-brands fa-facebook"></i>
-
-</a>
-
-
-
-
-
-
-<a href="https://www.tiktok.com/@gurpreetkomal?_r=1&_t=ZS-97qWlhYhn8u" 
-target="_blank">
-
-<i class="fa-brands fa-tiktok"></i>
-
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<a class="whatsapp" 
-href="https://wa.me/919988387388"
-target="_blank">
-
-
-<i class="fa-brands fa-whatsapp"></i>
-
-
-</a>
-
-
-
-
-
-
-
-
-<footer>
-
-
-<p>
-© Komal Art Gallery, Regd.
-</p>
-
-
-</footer><!-- ALBUM POPUP -->
-
-<div id="albumPopup" class="album-popup">
-
-
-<span class="close-btn" onclick="closeAlbum()">×</span>
-
-
-<div id="albumGrid" class="album-grid"></div>
-
-
-</div>
-
-
-
-
-
-<!-- IMAGE ENLARGE POPUP -->
-
-
-<div id="imagePopup" class="enlarge-popup">
-
-
-<span class="close-btn" onclick="closeImage()">×</span>
-
-
-<img id="bigImage">
-
-
-</div>
-
-
-
-
-
-<style>
-
-
-/* POPUP */
-
-
-.album-popup,
-.enlarge-popup{
-
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,.92);
-
-display:none;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:999;
-
-padding:30px;
-
-
-}
-
-
-
-
-.album-grid{
-
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
-width:90%;
-
-max-width:1000px;
-
-
-}
-
-
-
-
-.album-grid img{
-
-
-width:100%;
-
-border-radius:8px;
-
-cursor:pointer;
-
-
-}
-
-
-
-
-.enlarge-popup img{
-
-
-max-width:90%;
-
-max-height:85%;
-
-border-radius:10px;
-
-
-}
-
-
-
-
-.close-btn{
-
-
-position:absolute;
-
-top:20px;
-
-right:35px;
-
-font-size:45px;
-
-color:white;
-
-cursor:pointer;
-
-
-}
-
-
-
-
-.whatsapp{
-
-
-position:fixed;
-
-bottom:20px;
-
-right:20px;
-
-background:#25D366;
-
-color:white;
-
-width:55px;
-
-height:55px;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:28px;
-
-text-decoration:none;
-
-z-index:1000;
-
-
-}
-
-
-
-
-.map-container{
-
-
-max-width:900px;
-
-margin:auto;
-
-border-radius:10px;
-
-overflow:hidden;
-
-
-}
-
-
-
-
-footer{
-
-
-background:#1F3C88;
-
-color:white;
-
-text-align:center;
-
-padding:20px;
-
-
-}
-
-
-
-
-@media(max-width:768px){
-
-
-.album-grid{
-
-
-grid-template-columns:1fr;
-
-
-}
-
-
-}
-
-
-
-</style>
-
-
-
-
-
-
-<script>
-
-
-const albums = {
-
-
-
-oil:[
-
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil1.jpg.JPG",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil2.jpg.JPG",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/oil3.jpg.JPG"
-
-
-],
-
-
-
-
-pencil:[
-
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil1.jpg.JPG",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil2.jpg.JPG",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/pencil3.jpg.JPG"
-
-
-],
-
-
-
-
-fabric:[
-
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric1.jpg.jpg",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric2.jpg.JPG",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/fabric3.jpg.jpg"
-
-
-],
-
-
-
-
-mosaic:[
-
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic1.jpg.jpg",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic2.jpg.jpg",
-
-"https://raw.githubusercontent.com/Komalartgallery/komal-art-gallery/main/images/mosaic3.jpg.jpg"
-
-
-]
-
-
-};
-
-
-
-
-
-
-
-
-function openAlbum(category){
-
-
-let popup=document.getElementById("albumPopup");
-
-let grid=document.getElementById("albumGrid");
-
-
-
-grid.innerHTML="";
-
-
-
-albums[category].forEach(function(imgURL){
-
-
-
-let img=document.createElement("img");
-
-
-
-img.src=imgURL;
-
-
-
-img.onclick=function(){
-
-
-openImage(imgURL);
-
-
-};
-
-
-
-grid.appendChild(img);
-
-
-
-});
-
-
-
-popup.style.display="flex";
-
-
-}
-
-
-
-
-
-
-
-
-function closeAlbum(){
-
-
-document.getElementById("albumPopup").style.display="none";
-
-
-}
-
-
-
-
-
-
-
-
-function openImage(imgURL){
-
-
-document.getElementById("bigImage").src=imgURL;
-
-
-document.getElementById("imagePopup").style.display="flex";
-
-
-}
-
-
-
-
-
-
-
-
-function closeImage(){
-
-
-document.getElementById("imagePopup").style.display="none";
-
-
-}
-
-
-
-</script>
-
-
-
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="announcement" role="note">
+    <span aria-hidden="true">✦</span>
+    <p>Original handmade artwork &amp; carefully packed worldwide shipping</p>
+    <a href="#contact">Start an inquiry</a>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="header-inner container">
+      <a class="brand" href="#home" aria-label="Komal Art Gallery home">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-copy">
+          <strong>Komal Art Gallery</strong>
+          <small>Art • Heritage • Learning</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <span class="sr-only">Open navigation menu</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation" data-menu>
+        <a href="#gallery">Gallery</a>
+        <a href="#commissions">Commissions</a>
+        <a href="#antiques">Antiques</a>
+        <a href="#school">Art School</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source srcset="images/optimized/oil2.webp" type="image/webp">
+          <img src="images/oil2.jpg.JPG" alt="" width="2592" height="1944" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container reveal is-visible">
+        <p class="eyebrow light">Komal Art Gallery, Regd. • Moga, Punjab</p>
+        <h1 id="hero-title">Art created by hand.<br><em>Stories preserved with care.</em></h1>
+        <p class="hero-lede">Discover original paintings, personal commissions, professional art classes and a growing collection of historical objects—presented for art lovers in India and around the world.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#gallery">Explore Gallery</a>
+          <a class="button button-ghost" href="#commissions">Commission Artwork</a>
+          <a class="button button-ghost" href="#antiques">Antiques Collection</a>
+          <a class="text-link light-link" href="#contact">Contact Us <span aria-hidden="true">→</span></a>
+        </div>
+        <ul class="hero-notes" aria-label="Key services">
+          <li>Original Handmade Paintings</li>
+          <li>Worldwide Shipping</li>
+          <li>Custom Artwork</li>
+          <li>Offline &amp; Online Art Classes</li>
+        </ul>
+      </div>
+      <a class="scroll-cue" href="#gallery" aria-label="Scroll to artwork gallery">
+        <span>Discover</span><i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="trust-strip" aria-label="Gallery services">
+      <div class="container trust-grid">
+        <article><span class="line-icon" aria-hidden="true">✧</span><div><strong>Handmade originals</strong><small>Created with attention to detail</small></div></article>
+        <article><span class="line-icon" aria-hidden="true">◎</span><div><strong>Personal commissions</strong><small>Artwork made for your story</small></div></article>
+        <article><span class="line-icon" aria-hidden="true">◇</span><div><strong>Worldwide delivery</strong><small>Careful international packaging</small></div></article>
+        <article><span class="line-icon" aria-hidden="true">⌁</span><div><strong>Direct assistance</strong><small>Personalized inquiry support</small></div></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Selected works</p>
+            <h2>A gallery of technique, feeling and tradition</h2>
+          </div>
+          <p>Browse the existing Komal Art Gallery collection across oil painting, pencil portraiture, fabric painting and detailed mosaic work. Select any image to view it closely.</p>
+        </div>
+
+        <div class="filter-bar reveal" role="toolbar" aria-label="Filter artwork by category">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All Works</button>
+          <button class="filter-button" type="button" data-filter="oil" aria-pressed="false">Oil Paintings</button>
+          <button class="filter-button" type="button" data-filter="pencil" aria-pressed="false">Pencil Portraits</button>
+          <button class="filter-button" type="button" data-filter="fabric" aria-pressed="false">Fabric Painting</button>
+          <button class="filter-button" type="button" data-filter="mosaic" aria-pressed="false">Mosaic Art</button>
+        </div>
+
+        <div class="art-grid" data-gallery>
+          <button class="art-card tall reveal" type="button" data-category="oil" data-image="images/oil1.jpg.JPG" data-title="Contemplative Portrait" data-medium="Oil Painting">
+            <picture><source srcset="images/optimized/oil1.webp" type="image/webp"><img src="images/oil1.jpg.JPG" alt="Oil portrait painting of a thoughtful young man" width="1944" height="2592" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Oil Painting</small><strong>Contemplative Portrait</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card wide reveal" type="button" data-category="oil" data-image="images/oil2.jpg.JPG" data-title="Village Tradition" data-medium="Oil Painting">
+            <picture><source srcset="images/optimized/oil2.webp" type="image/webp"><img src="images/oil2.jpg.JPG" alt="Oil painting of a Punjabi woman using a traditional spinning wheel" width="2592" height="1944" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Oil Painting</small><strong>Village Tradition</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card wide reveal" type="button" data-category="oil" data-image="images/oil3.jpg.JPG" data-title="Artist at Work" data-medium="Oil Painting">
+            <picture><source srcset="images/optimized/oil3.webp" type="image/webp"><img src="images/oil3.jpg.JPG" alt="Painting showing an artist working beside a seated portrait subject" width="1054" height="884" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Oil Painting</small><strong>Artist at Work</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+
+          <button class="art-card tall reveal" type="button" data-category="pencil" data-image="images/pencil1.jpg.JPG" data-title="Expressive Study" data-medium="Pencil Sketch">
+            <picture><source srcset="images/optimized/pencil1.webp" type="image/webp"><img src="images/pencil1.jpg.JPG" alt="Expressive pencil sketch of a person holding their face" width="1944" height="2592" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Pencil Sketch</small><strong>Expressive Study</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card reveal" type="button" data-category="pencil" data-image="images/pencil2.jpg.JPG" data-title="Figure Study" data-medium="Pencil Drawing">
+            <picture><source srcset="images/optimized/pencil2.webp" type="image/webp"><img src="images/pencil2.jpg.JPG" alt="Monochrome seated figure pencil drawing" width="216" height="288" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Pencil Drawing</small><strong>Figure Study</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card tall reveal" type="button" data-category="pencil" data-image="images/pencil3.jpg.JPG" data-title="Classic Portrait" data-medium="Pencil Portrait">
+            <picture><source srcset="images/optimized/pencil3.webp" type="image/webp"><img src="images/pencil3.jpg.JPG" alt="Detailed pencil portrait of a young girl" width="1116" height="1544" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Pencil Portrait</small><strong>Classic Portrait</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+
+          <button class="art-card tall reveal" type="button" data-category="fabric" data-image="images/fabric1.jpg.jpg" data-title="Floral Ensemble" data-medium="Fabric Painting">
+            <picture><source srcset="images/optimized/fabric1.webp" type="image/webp"><img src="images/fabric1.jpg.jpg" alt="Hand-painted floral design on a dark fabric suit" width="540" height="900" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Fabric Painting</small><strong>Floral Ensemble</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card tall reveal" type="button" data-category="fabric" data-image="images/fabric2.jpg.JPG" data-title="Blue Floral Panel" data-medium="Fabric Painting">
+            <picture><source srcset="images/optimized/fabric2.webp" type="image/webp"><img src="images/fabric2.jpg.JPG" alt="Detailed gold and white floral painting on blue fabric" width="1944" height="2592" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Fabric Painting</small><strong>Blue Floral Panel</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card tall reveal" type="button" data-category="fabric" data-image="images/fabric3.jpg.jpg" data-title="Turquoise Floral Drapery" data-medium="Fabric Painting">
+            <picture><source srcset="images/optimized/fabric3.webp" type="image/webp"><img src="images/fabric3.jpg.jpg" alt="Turquoise fabric decorated with black and gold hand-painted flowers" width="528" height="960" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Fabric Painting</small><strong>Turquoise Floral Drapery</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+
+          <button class="art-card wide reveal" type="button" data-category="mosaic" data-image="images/mosaic1.jpg.jpg" data-title="Ornamental Ceiling" data-medium="Mosaic Art">
+            <picture><source srcset="images/optimized/mosaic1.webp" type="image/webp"><img src="images/mosaic1.jpg.jpg" alt="Intricate circular mosaic pattern on an ornamental ceiling" width="2560" height="1920" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Mosaic Art</small><strong>Ornamental Ceiling</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card wide reveal" type="button" data-category="mosaic" data-image="images/mosaic2.jpg.jpg" data-title="Heritage Entrance" data-medium="Mosaic Art">
+            <picture><source srcset="images/optimized/mosaic2.webp" type="image/webp"><img src="images/mosaic2.jpg.jpg" alt="Decorative mosaic artwork around a heritage building entrance" width="1280" height="720" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Mosaic Art</small><strong>Heritage Entrance</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+          <button class="art-card tall reveal" type="button" data-category="mosaic" data-image="images/mosaic3.jpg.jpg" data-title="Sacred Interior Detail" data-medium="Mosaic Art">
+            <picture><source srcset="images/optimized/mosaic3.webp" type="image/webp"><img src="images/mosaic3.jpg.jpg" alt="Detailed mosaic decoration inside a traditional sacred interior" width="900" height="1600" loading="lazy"></picture>
+            <span class="art-card-overlay"><span><small>Mosaic Art</small><strong>Sacred Interior Detail</strong></span><i aria-hidden="true">＋</i></span>
+          </button>
+        </div>
+
+        <div class="section-footer reveal">
+          <p>Looking for a particular style, size or subject?</p>
+          <a class="text-link" href="#contact" data-inquiry="Custom Artwork Inquiry">Discuss a custom artwork <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="commissions" class="section commission-section">
+      <div class="container commission-layout">
+        <div class="commission-collage reveal" aria-label="Examples of custom artwork">
+          <figure class="collage-main"><picture><source srcset="images/optimized/oil1.webp" type="image/webp"><img src="images/oil1.jpg.JPG" alt="Custom oil portrait example" width="1944" height="2592" loading="lazy"></picture></figure>
+          <figure class="collage-small top"><picture><source srcset="images/optimized/pencil3.webp" type="image/webp"><img src="images/pencil3.jpg.JPG" alt="Custom pencil portrait example" width="1116" height="1544" loading="lazy"></picture></figure>
+          <figure class="collage-small bottom"><picture><source srcset="images/optimized/oil2.webp" type="image/webp"><img src="images/oil2.jpg.JPG" alt="Traditional themed oil painting example" width="2592" height="1944" loading="lazy"></picture></figure>
+          <span class="collage-seal" aria-hidden="true">Made<br>for you</span>
+        </div>
+
+        <div class="commission-copy reveal">
+          <p class="eyebrow">Commissioned artwork</p>
+          <h2>Turn a memory, person or idea into lasting art</h2>
+          <p>Every commission begins with a conversation. Share your preferred subject, medium, size, reference images and destination. Komal Art Gallery will respond directly to discuss what can be created.</p>
+          <div class="commission-list">
+            <span>Portraits</span><span>Oil Paintings</span><span>Family Portraits</span><span>Pet Portraits</span>
+            <span>Corporate Art</span><span>Religious Art</span><span>Large Wall Paintings</span><span>Gift Paintings</span>
+          </div>
+          <div class="simple-steps" aria-label="Commission process">
+            <div><b>01</b><span><strong>Share your idea</strong><small>Send details and suitable reference images.</small></span></div>
+            <div><b>02</b><span><strong>Confirm the artwork</strong><small>Discuss medium, dimensions, timing and delivery.</small></span></div>
+            <div><b>03</b><span><strong>Creation &amp; delivery</strong><small>Your finished artwork is prepared for collection or shipping.</small></span></div>
+          </div>
+          <a class="button button-dark" href="#contact" data-inquiry="Custom Artwork Inquiry">Request Custom Artwork</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="antiques" class="section antiques-section">
+      <div class="museum-light" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-heading dark-heading reveal">
+          <div>
+            <p class="eyebrow light">Antiques collection</p>
+            <h2>Objects that carry traces of another time</h2>
+          </div>
+          <p>Explore inquiries related to the gallery’s collection of historic objects and collectible pieces. Item details, condition, provenance information and availability are shared directly—without unsupported claims.</p>
+        </div>
+
+        <div class="antique-timeline">
+          <article class="antique-card reveal">
+            <span class="antique-number">01</span><div class="antique-symbol" aria-hidden="true">◉</div>
+            <h3>200+ Year Old Coins</h3><p>Historic coins and currency-related collectibles from different periods.</p>
+          </article>
+          <article class="antique-card reveal">
+            <span class="antique-number">02</span><div class="antique-symbol" aria-hidden="true">▣</div>
+            <h3>British India Era Cameras</h3><p>Vintage photographic equipment associated with an earlier era of image-making.</p>
+          </article>
+          <article class="antique-card reveal">
+            <span class="antique-number">03</span><div class="antique-symbol" aria-hidden="true">⌁</div>
+            <h3>Historic Whistles</h3><p>Old whistles and small functional objects linked with the British rule period.</p>
+          </article>
+          <article class="antique-card reveal">
+            <span class="antique-number">04</span><div class="antique-symbol" aria-hidden="true">♨</div>
+            <h3>Vintage Utensils</h3><p>Traditional household utensils showing earlier materials, forms and craftsmanship.</p>
+          </article>
+          <article class="antique-card reveal">
+            <span class="antique-number">05</span><div class="antique-symbol" aria-hidden="true">◇</div>
+            <h3>Heritage Artifacts</h3><p>Historic collectibles and heritage objects preserved as cultural pieces.</p>
+          </article>
+          <article class="antique-card reveal">
+            <span class="antique-number">06</span><div class="antique-symbol" aria-hidden="true">✦</div>
+            <h3>Rare Collectibles</h3><p>Distinctive pieces considered for their age, design, material or historical interest.</p>
+          </article>
+        </div>
+
+        <div class="antique-note reveal">
+          <p><strong>Interested in a particular object?</strong> Ask for available photographs and confirmed details before making a decision.</p>
+          <a class="button button-gold" href="#contact" data-inquiry="Antiques Inquiry">Contact us regarding Antique Collections</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shipping-section" aria-labelledby="shipping-title">
+      <div class="container shipping-layout">
+        <div class="shipping-copy reveal">
+          <p class="eyebrow">From Moga to the world</p>
+          <h2 id="shipping-title">Worldwide shipping, arranged with care</h2>
+          <p>International customers are welcome. Delivery arrangements are discussed individually so artwork can be packed appropriately for its size, medium and destination.</p>
+          <a class="text-link" href="#contact" data-inquiry="General Inquiry">Ask about shipping <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="shipping-features">
+          <article class="reveal"><span>01</span><h3>Safe International Packaging</h3><p>Artwork is prepared and protected with transport in mind.</p></article>
+          <article class="reveal"><span>02</span><h3>Secure Payment Arrangements</h3><p>Payment details and order terms are confirmed directly before work proceeds.</p></article>
+          <article class="reveal"><span>03</span><h3>Carefully Packed Artwork</h3><p>Packaging is selected according to the artwork’s format and delivery route.</p></article>
+          <article class="reveal"><span>04</span><h3>Global Delivery Support</h3><p>Destination and shipping requirements are reviewed during the inquiry.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container about-layout">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About the gallery</p>
+          <h2>A family-run space shaped by art, teaching and preservation</h2>
+          <p>Komal Art Gallery, Regd. is based in Moga, Punjab and led by artist Gurpreet Singh Komal. The gallery brings together original handmade paintings, portrait work, fabric art, mosaic art, creative teaching and heritage objects.</p>
+          <p>Its purpose is simple: to create meaningful artwork, help students develop practical artistic skills and welcome thoughtful inquiries from collectors and art lovers in India and abroad.</p>
+          <blockquote>“Art is not only displayed here—it is made, taught, discussed and carried forward.”</blockquote>
+        </div>
+        <div class="about-visual reveal">
+          <picture><source srcset="images/optimized/oil3.webp" type="image/webp"><img src="images/oil3.jpg.JPG" alt="Gurpreet Singh Komal shown creating artwork" width="1054" height="884" loading="lazy"></picture>
+          <div class="about-caption"><small>Artist &amp; owner</small><strong>Gurpreet Singh Komal</strong><span>Moga, Punjab, India</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section film-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Inside the studio</p><h2>Visit Komal Art Gallery through film</h2></div>
+          <p>Watch the existing gallery video to see the creative environment, artwork and teaching space.</p>
+        </div>
+        <div class="video-frame reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/LMWj7SO328U?rel=0" title="Inside Komal Art Gallery" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="school" class="section school-section">
+      <div class="container">
+        <div class="school-intro reveal">
+          <p class="eyebrow light">Komal Art School</p>
+          <h2>Professional guidance for growing artists</h2>
+          <p>Training is available in drawing, painting, fabric art and creative design. Students receive certificates after completion. Contact the school for current offline and online class details.</p>
+          <a class="button button-gold" href="#contact" data-inquiry="Art Classes Inquiry">Ask About Art Classes</a>
+        </div>
+
+        <div class="learning-path" aria-label="Art learning journey">
+          <article class="reveal"><b>Foundations</b><span>Observation, line, form, tone and essential techniques.</span></article>
+          <article class="reveal"><b>Practice</b><span>Guided exercises across selected mediums and subjects.</span></article>
+          <article class="reveal"><b>Development</b><span>Build confidence, finish projects and strengthen personal style.</span></article>
+          <article class="reveal"><b>Completion</b><span>Students receive certificates after course completion.</span></article>
+        </div>
+
+        <div class="student-progress reveal" aria-label="Typical learning progression">
+          <div><small>At the beginning</small><strong>Foundations &amp; observation</strong><p>Students begin with line, proportion, colour, form and medium control.</p></div>
+          <span aria-hidden="true">→</span>
+          <div><small>As skills develop</small><strong>More confident finished work</strong><p>Guided practice supports stronger composition, detail and personal expression. Progress varies by learner.</p></div>
+          <div class="certificate-note"><small>Course completion</small><strong>Certificates are provided after completion</strong></div>
+        </div>
+
+        <div class="student-heading reveal">
+          <div><p class="eyebrow light">Student work gallery</p><h3>Learning through making</h3></div>
+          <p>Existing photographs from the Komal Art School learning journey.</p>
+        </div>
+
+        <div class="student-grid">
+          <button class="student-card reveal" type="button" data-image="images/student1.jpg.jpg" data-title="Student Painting 1" data-medium="Student Work">
+            <picture><source srcset="images/optimized/student1.webp" type="image/webp"><img src="images/student1.jpg.jpg" alt="Student standing beside a painting in progress" width="640" height="1280" loading="lazy"></picture>
+            <span><small>Student Work</small><strong>Painting Practice</strong></span>
+          </button>
+          <button class="student-card reveal" type="button" data-image="images/student2.jpg.jpg" data-title="Student Painting 2" data-medium="Student Work">
+            <picture><source srcset="images/optimized/student2.webp" type="image/webp"><img src="images/student2.jpg.jpg" alt="Student painting a portrait on a large canvas" width="1224" height="1632" loading="lazy"></picture>
+            <span><small>Student Work</small><strong>Portrait Development</strong></span>
+          </button>
+          <button class="student-card reveal" type="button" data-image="images/student3.jpg.jpg" data-title="Student Painting 3" data-medium="Student Work">
+            <picture><source srcset="images/optimized/student3.webp" type="image/webp"><img src="images/student3.jpg.jpg" alt="Students working together on paintings in the studio" width="960" height="540" loading="lazy"></picture>
+            <span><small>Student Work</small><strong>Studio Learning</strong></span>
+          </button>
+          <button class="student-card reveal" type="button" data-image="images/student4.jpg.jpg" data-title="Student Painting 4" data-medium="Student Work">
+            <picture><source srcset="images/optimized/student4.webp" type="image/webp"><img src="images/student4.jpg.jpg" alt="Art teacher helping children during a drawing class" width="640" height="426" loading="lazy"></picture>
+            <span><small>Student Work</small><strong>Guided Art Class</strong></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section reviews-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Client words</p><h2>Experiences shared with the gallery</h2></div>
+          <a class="text-link" href="https://www.google.com/search?q=Komal+Art+Gallery+Moga" target="_blank" rel="noopener noreferrer">View Google Reviews <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card featured reveal">
+            <div class="stars" aria-label="Five stars">★★★★★</div>
+            <blockquote>“Beautiful artwork, excellent painting quality and creative teaching experience.”</blockquote>
+            <p>More customer feedback is available on the gallery’s Google Business Profile.</p>
+            <a href="https://www.google.com/search?q=Komal+Art+Gallery+Moga" target="_blank" rel="noopener noreferrer">Open Google profile <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="review-card reveal"><div class="quote-mark" aria-hidden="true">“</div><blockquote>Beautiful handmade paintings and amazing artwork.</blockquote><footer>Art Collector</footer></article>
+          <article class="review-card reveal"><div class="quote-mark" aria-hidden="true">“</div><blockquote>Excellent guidance and creative learning experience.</blockquote><footer>Art Student</footer></article>
+          <article class="review-card reveal"><div class="quote-mark" aria-hidden="true">“</div><blockquote>Portrait sketch quality was outstanding.</blockquote><footer>International Client</footer></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why-section">
+      <div class="container">
+        <div class="center-heading reveal"><p class="eyebrow">Why choose us</p><h2>Personal art service without the gallery distance</h2></div>
+        <div class="why-grid">
+          <article class="reveal"><span>✦</span><h3>Handmade Artwork</h3><p>Original work created through real artistic practice.</p></article>
+          <article class="reveal"><span>✎</span><h3>Professional Artist</h3><p>Direct guidance from artist and owner Gurpreet Singh Komal.</p></article>
+          <article class="reveal"><span>◎</span><h3>Custom Orders</h3><p>Artwork developed around your subject and preferences.</p></article>
+          <article class="reveal"><span>◇</span><h3>Worldwide Shipping</h3><p>International delivery inquiries are welcomed.</p></article>
+          <article class="reveal"><span>▱</span><h3>Premium Packaging</h3><p>Careful packing planned for the artwork and destination.</p></article>
+          <article class="reveal"><span>⌁</span><h3>Trusted Communication</h3><p>Order details are discussed directly and clearly.</p></article>
+          <article class="reveal"><span>◫</span><h3>Online &amp; Offline Classes</h3><p>Flexible art-learning inquiries for different locations.</p></article>
+          <article class="reveal"><span>♡</span><h3>Personalized Service</h3><p>A human response to every serious inquiry.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal"><p class="eyebrow">Frequently asked</p><h2>Before you send an inquiry</h2><p>These answers explain the basic process. Exact artwork, class, antique and delivery details are confirmed directly.</p></div>
+        <div class="accordion" data-accordion>
+          <details class="reveal"><summary>Does Komal Art Gallery ship paintings internationally?<span aria-hidden="true">＋</span></summary><p>Yes. Worldwide shipping is available. Packaging, delivery arrangements and payment details are confirmed directly for each artwork and destination.</p></details>
+          <details class="reveal"><summary>Can I order a custom portrait or painting?<span aria-hidden="true">＋</span></summary><p>Yes. Use the contact form and select “Custom Artwork Inquiry.” Include the subject, preferred medium, approximate size, destination and any relevant reference-image details.</p></details>
+          <details class="reveal"><summary>Are art classes available online?<span aria-hidden="true">＋</span></summary><p>Komal Art School accepts inquiries for both offline and online learning. Current course availability and schedules are shared directly.</p></details>
+          <details class="reveal"><summary>How can I ask about an antique item?<span aria-hidden="true">＋</span></summary><p>Select “Antiques Inquiry” below and describe the type of object you are interested in. Photographs, confirmed details and availability can then be shared directly.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <p class="eyebrow light">Contact us</p>
+          <h2>Begin with a simple conversation</h2>
+          <p>Tell us whether you are interested in commissioned artwork, art classes, antiques or another gallery service. Please provide enough detail for a useful reply.</p>
+          <div class="contact-details">
+            <a href="tel:+919988387388"><small>WhatsApp / Phone</small><strong>+91 99883 87388</strong></a>
+            <a href="mailto:komalartgallery@gmail.com"><small>Email</small><strong>komalartgallery@gmail.com</strong></a>
+            <div><small>Location</small><strong>Moga, Punjab, India</strong></div>
+          </div>
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://www.instagram.com/gurpreetsinghkomal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="https://www.facebook.com/gurpreet.komal" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook <span aria-hidden="true">↗</span></a>
+            <a href="https://www.tiktok.com/@gurpreetkomal?_r=1&amp;_t=ZS-97qWlhYhn8u" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal">
+          <form action="https://submit-form.com/KEhXAvbXn" method="POST" data-contact-form>
+            <input type="hidden" name="_subject" value="New Komal Art Gallery website inquiry">
+            <div class="form-grid">
+              <label><span>Full Name *</span><input type="text" name="name" autocomplete="name" required></label>
+              <label><span>Email Address *</span><input type="email" name="email" autocomplete="email" required></label>
+              <label><span>Phone / WhatsApp</span><input type="tel" name="phone" autocomplete="tel"></label>
+              <label><span>Country</span><input type="text" name="country" autocomplete="country-name"></label>
+              <label class="full"><span>Inquiry Category *</span>
+                <select name="inquiry_category" required data-inquiry-select>
+                  <option value="" selected disabled>Select a category</option>
+                  <option value="Custom Artwork Inquiry">Custom Artwork Inquiry</option>
+                  <option value="Art Classes Inquiry">Art Classes Inquiry</option>
+                  <option value="Antiques Inquiry">Antiques Inquiry</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+              <label class="full"><span>Subject *</span><input type="text" name="subject" required></label>
+              <label class="full"><span>Message *</span><textarea name="message" rows="6" required placeholder="Please include the artwork, class, antique or delivery details that will help us respond."></textarea></label>
+            </div>
+            <button class="button button-gold form-submit" type="submit">Send Inquiry <span aria-hidden="true">→</span></button>
+            <p class="form-note">By submitting this form, you agree to be contacted about your inquiry. No payment is collected through this form.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" aria-labelledby="location-title">
+      <div class="map-copy"><p class="eyebrow">Visit the gallery</p><h2 id="location-title">Komal Art Gallery, Moga</h2><p>Use the map for directions to the gallery in Moga, Punjab.</p></div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Komal%20Art%20Gallery%20Moga%20Punjab&amp;output=embed" title="Map showing Komal Art Gallery in Moga, Punjab" width="100%" height="520" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand inverse" href="#home"><span class="brand-mark">K</span><span class="brand-copy"><strong>Komal Art Gallery</strong><small>Art • Heritage • Learning</small></span></a>
+        <p>Original paintings, custom artwork, art classes and antique inquiries from Moga, Punjab—with worldwide shipping available.</p>
+      </div>
+      <div><h2>Explore</h2><a href="#gallery">Artwork Gallery</a><a href="#commissions">Commissioned Art</a><a href="#antiques">Antiques Collection</a><a href="#school">Art Classes</a></div>
+      <div><h2>Artwork</h2><a href="#gallery" data-filter-link="oil">Oil Paintings</a><a href="#gallery" data-filter-link="pencil">Pencil Portraits</a><a href="#gallery" data-filter-link="fabric">Fabric Painting</a><a href="#gallery" data-filter-link="mosaic">Mosaic Art</a></div>
+      <div><h2>Contact</h2><a href="tel:+919988387388">+91 99883 87388</a><a href="mailto:komalartgallery@gmail.com">komalartgallery@gmail.com</a><span>Moga, Punjab, India</span><a href="#contact">Worldwide Shipping Inquiry</a></div>
+    </div>
+    <div class="container footer-bottom"><p>© <span data-year></span> Komal Art Gallery, Regd. All rights reserved.</p><div><a href="#faq">FAQ</a><a href="sitemap.xml">Sitemap</a><a href="#home">Back to top ↑</a></div></div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/919988387388?text=Hello%20Komal%20Art%20Gallery%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer" aria-label="Contact Komal Art Gallery on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3A12.8 12.8 0 0 0 5.03 22.3L3.3 28.63l6.48-1.7A12.8 12.8 0 1 0 16.04 3Zm0 23.42a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.84 1 1.03-3.74-.25-.39a10.61 10.61 0 1 1 8.85 4.84Zm5.82-7.95c-.32-.16-1.89-.93-2.18-1.04-.29-.1-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.58a9.56 9.56 0 0 1-1.77-2.2c-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.66 0 1.57 1.14 3.08 1.3 3.29.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.15-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37Z"/></svg>
+  </a>
+
+  <dialog class="lightbox" data-lightbox aria-label="Artwork image viewer">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer" data-lightbox-close>×</button>
+    <button class="lightbox-nav previous" type="button" aria-label="View previous image" data-lightbox-prev>‹</button>
+    <figure><img src="" alt="" data-lightbox-image><figcaption><small data-lightbox-medium></small><strong data-lightbox-title></strong></figcaption></figure>
+    <button class="lightbox-nav next" type="button" aria-label="View next image" data-lightbox-next>›</button>
+  </dialog>
+
+  <noscript><div class="noscript-message">JavaScript is disabled. The website content and contact form still work, but gallery filtering and image enlargement are unavailable.</div></noscript>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
