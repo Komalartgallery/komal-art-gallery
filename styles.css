@@ -3090,3 +3090,258 @@ h3 {
   color: #2a1713;
   transform: translateY(-2px);
 }
+
+/* Decorations portfolio */
+.decorations-section {
+  background: linear-gradient(180deg, var(--ivory) 0%, #f7f1e9 100%);
+}
+
+.decorations-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  margin-top: 54px;
+}
+
+.decorations-real {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  min-height: 620px;
+  background: var(--charcoal);
+  box-shadow: var(--shadow);
+}
+
+.decorations-real picture,
+.decorations-real img {
+  width: 100%;
+  height: 100%;
+}
+
+.decorations-real img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.decorations-real figcaption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  display: grid;
+  gap: 4px;
+  padding: 22px 24px;
+  background: rgba(43, 36, 31, 0.9);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.decorations-real figcaption span,
+.decor-card figcaption small {
+  color: var(--gold-light);
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.decorations-real figcaption strong {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  font-weight: 600;
+}
+
+.decorations-real figcaption small {
+  color: rgba(255,255,255,.72);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.decorations-copy h3 {
+  margin: 8px 0 22px;
+  color: var(--burgundy);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.decorations-copy > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.decorations-list {
+  display: grid;
+  gap: 11px;
+  margin: 26px 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.decorations-list li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+  border-bottom: 1px solid rgba(95,23,37,.12);
+  color: var(--charcoal);
+  font-size: .9rem;
+}
+
+.decorations-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.decorations-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.decor-card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(95,23,37,.12);
+  background: #fffdfa;
+  box-shadow: 0 16px 45px rgba(43,36,31,.08);
+}
+
+.decor-card picture {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--ivory-2);
+}
+
+.decor-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.decor-card:hover img { transform: scale(1.035); }
+
+.decor-card figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 18px 17px 20px;
+}
+
+.decor-card figcaption small { color: var(--gold-dark); }
+
+.decor-card figcaption strong {
+  color: var(--burgundy);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.decor-card figcaption span {
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.5;
+}
+
+.decorations-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 34px;
+  padding: 27px 30px;
+  border: 1px solid rgba(95,23,37,.14);
+  background: rgba(255,255,255,.58);
+}
+
+.decorations-note div { display: grid; gap: 3px; }
+.decorations-note small { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; }
+.decorations-note strong { color: var(--burgundy); font-family: var(--serif); font-size: 1.45rem; font-weight: 600; }
+
+/* Record-holder family extension */
+.record-family {
+  margin-top: clamp(80px, 10vw, 140px);
+  padding-top: clamp(58px, 7vw, 92px);
+  border-top: 1px solid rgba(95,23,37,.16);
+}
+
+.record-family-heading {
+  display: grid;
+  grid-template-columns: minmax(0,.85fr) minmax(280px,.55fr);
+  column-gap: clamp(45px,7vw,100px);
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.record-family-heading .eyebrow { grid-column: 1 / -1; }
+.record-family-heading h3 {
+  margin: 8px 0 0;
+  color: var(--burgundy);
+  font-family: var(--serif);
+  font-size: clamp(2.2rem,4.4vw,4rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.record-family-heading > p:not(.eyebrow) { margin: 0; color: var(--muted); }
+
+.family-record-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 20px;
+}
+
+.family-record-card {
+  padding: clamp(28px,4vw,42px);
+  border: 1px solid rgba(95,23,37,.14);
+  background: #fffdfa;
+}
+
+.family-record-feature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(280px,.82fr) minmax(0,1.18fr);
+  gap: clamp(30px,5vw,68px);
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.family-record-image { min-height: 490px; height: 100%; background: var(--ivory-2); }
+.family-record-image picture,
+.family-record-image img { width: 100%; height: 100%; }
+.family-record-image img { display:block; object-fit: cover; }
+.family-record-body { padding: clamp(30px,5vw,58px) clamp(30px,5vw,64px) clamp(30px,5vw,58px) 0; }
+.family-role { color: var(--gold-dark); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.family-record-card h4 { margin: 9px 0 18px; color: var(--burgundy); font-family: var(--serif); font-size: clamp(1.75rem,3vw,2.55rem); font-weight: 600; line-height:1.05; }
+.family-record-card p { margin: 0 0 16px; color: var(--muted); }
+.family-record-card strong { color: var(--burgundy); }
+.family-record-card .text-link { margin-top: 8px; }
+
+@media (max-width: 1180px) {
+  .decorations-gallery { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+
+@media (max-width: 860px) {
+  .decorations-feature,
+  .family-record-feature,
+  .record-family-heading { grid-template-columns: 1fr; }
+  .decorations-real { min-height: 560px; }
+  .decorations-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .family-record-body { padding: 34px 28px 38px; }
+  .family-record-image { min-height: 420px; }
+  .record-family-heading > p:not(.eyebrow) { margin-top: 18px; }
+}
+
+@media (max-width: 560px) {
+  .decorations-real { min-height: 500px; }
+  .decorations-real figcaption { left: 14px; right: 14px; bottom: 14px; padding: 18px; }
+  .decorations-gallery { grid-template-columns: 1fr; }
+  .decor-card picture { aspect-ratio: 5 / 4; }
+  .decorations-note { align-items: flex-start; flex-direction: column; }
+  .family-record-grid { grid-template-columns: 1fr; }
+  .family-record-feature { grid-column: auto; }
+}
