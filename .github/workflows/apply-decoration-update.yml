@@ -1,0 +1,158 @@
+name: Apply decorations and family-record updates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-decoration-update.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge requested website updates
+        shell: bash
+        run: |
+          set -euo pipefail
+          ZIP='komal-art-gallery-decorations-family-records (1).zip'
+          test -f "$ZIP"
+          rm -rf /tmp/kag-update
+          mkdir -p /tmp/kag-update
+          unzip -q "$ZIP" -d /tmp/kag-update
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+
+          root = Path('.')
+          upd = Path('/tmp/kag-update')
+          if not (upd / 'index.html').exists():
+              candidates = [p for p in upd.iterdir() if p.is_dir() and (p / 'index.html').exists()]
+              if len(candidates) != 1:
+                  raise SystemExit('Could not locate index.html inside update ZIP')
+              upd = candidates[0]
+
+          # Copy only the new image assets. Existing gallery images remain untouched.
+          src_decor = upd / 'images' / 'decorations'
+          dst_decor = root / 'images' / 'decorations'
+          dst_decor.mkdir(parents=True, exist_ok=True)
+          for src in src_decor.iterdir():
+              if src.is_file():
+                  shutil.copy2(src, dst_decor / src.name)
+
+          dst_records = root / 'images' / 'records'
+          dst_records.mkdir(parents=True, exist_ok=True)
+          for name in ('sarabjit-kaur-komal-phulkari.png', 'sarabjit-kaur-komal-phulkari.webp'):
+              src = upd / 'images' / 'records' / name
+              if src.exists():
+                  shutil.copy2(src, dst_records / name)
+
+          current = (root / 'index.html').read_text(encoding='utf-8')
+          source = (upd / 'index.html').read_text(encoding='utf-8')
+
+          # 1) Decorations section, inserted immediately before About.
+          if 'id="decorations"' not in current:
+              start = source.index('    <section id="decorations"')
+              end = source.index('    <section id="about"', start)
+              decorations = source[start:end]
+              current = current.replace('    <section id="about"', decorations + '    <section id="about"', 1)
+
+          # 2) Record-holder family block, appended inside About without replacing existing About content.
+          if 'class="container record-family' not in current:
+              fam_start = source.index('      <div class="container record-family')
+              source_video = source.index('    <section id="video"', fam_start)
+              source_about_close = source.rfind('    </section>', fam_start, source_video)
+              family = source[fam_start:source_about_close]
+              current_video = current.index('    <section id="video"')
+              current_about_close = current.rfind('    </section>', 0, current_video)
+              current = current[:current_about_close] + family + current[current_about_close:]
+
+          # 3) Navigation link.
+          nav_link = '        <a href="#decorations">Decorations</a>'
+          if nav_link not in current:
+              needle = '        <a href="#antiques">Antiques</a>\n        <a href="#school">Art School</a>'
+              replacement = '        <a href="#antiques">Antiques</a>\n' + nav_link + '\n        <a href="#school">Art School</a>'
+              if needle not in current:
+                  raise SystemExit('Primary navigation anchor not found')
+              current = current.replace(needle, replacement, 1)
+
+          # 4) Hero service note.
+          hero_note = '          <li>Seasonal &amp; Event Decorations</li>'
+          if hero_note not in current:
+              needle = '          <li>Offline &amp; Online Art Classes</li>'
+              if needle in current:
+                  current = current.replace(needle, needle + '\n' + hero_note, 1)
+
+          # 5) Decorations inquiry category.
+          option = '                  <option value="Decorations Inquiry">Decorations Inquiry</option>'
+          if option not in current:
+              needle = '                  <option value="Antiques Inquiry">Antiques Inquiry</option>'
+              if needle not in current:
+                  raise SystemExit('Contact inquiry options anchor not found')
+              current = current.replace(needle, needle + '\n' + option, 1)
+
+          # 6) Decorations FAQ.
+          if 'Can I inquire about seasonal or event decorations?' not in current:
+              faq_start = current.index('        <div class="accordion" data-accordion>')
+              faq_end = current.index('        </div>', faq_start)
+              detail = '          <details class="reveal"><summary>Can I inquire about seasonal or event decorations?<span aria-hidden="true">＋</span></summary><p>Yes. Select “Decorations Inquiry” and share your occasion, preferred theme, approximate date, location and the area you would like decorated. Availability and final design details are confirmed directly.</p></details>\n'
+              current = current[:faq_end] + detail + current[faq_end:]
+
+          # 7) Footer Explore link.
+          footer_old = '<a href="#antiques">Antiques Collection</a><a href="#school">Art Classes</a>'
+          footer_new = '<a href="#antiques">Antiques Collection</a><a href="#decorations">Decorations</a><a href="#school">Art Classes</a>'
+          if footer_new not in current and footer_old in current:
+              current = current.replace(footer_old, footer_new, 1)
+
+          (root / 'index.html').write_text(current, encoding='utf-8')
+
+          # Append only the new Decorations + family styling to the CURRENT stylesheet,
+          # preserving chatbot, mobile-app, logo, and every other existing rule.
+          current_css = (root / 'styles.css').read_text(encoding='utf-8')
+          update_css = (upd / 'styles.css').read_text(encoding='utf-8')
+          marker = '/* Decorations portfolio */'
+          if marker not in current_css:
+              if marker not in update_css:
+                  raise SystemExit('Decorations CSS marker not found in update ZIP')
+              addon = update_css[update_css.index(marker):].strip()
+              current_css = current_css.rstrip() + '\n\n' + addon + '\n'
+              (root / 'styles.css').write_text(current_css, encoding='utf-8')
+
+          # Safety checks before committing.
+          final = (root / 'index.html').read_text(encoding='utf-8')
+          required = [
+              'id="decorations"',
+              'Sarabjit Kaur Komal',
+              'Gursimran Singh Komal',
+              'Ashmeet Kaur Komal',
+              'Decorations Inquiry',
+              'komal-art-gallery.expo.app',
+              'data-chatbot'
+          ]
+          missing = [item for item in required if item not in final]
+          if missing:
+              raise SystemExit('Safety check failed; missing: ' + ', '.join(missing))
+          PY
+
+      - name: Commit website files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Komal Art Gallery Website Updater'
+          git config user.email 'actions@users.noreply.github.com'
+          git add index.html styles.css images/decorations images/records/sarabjit-kaur-komal-phulkari.png images/records/sarabjit-kaur-komal-phulkari.webp
+          if git diff --cached --quiet; then
+            echo 'No website changes were needed.'
+            exit 0
+          fi
+          git commit -m 'Add decorations and record-holder family updates'
+          git push origin HEAD:main
